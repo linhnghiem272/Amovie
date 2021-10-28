@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>Rạp phim Animation</title>
+    <style>
+        :root{
+                --maincolor: #00266d;
+          
+            }
+        *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+
+            }
+            html{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                background:#faf3dd;
+            }
+            body{width: 1100px;
+              
+               background:  white;
+                margin:0 auto;
+                padding: 0 6px 0 6px;
+
+            }
+            #smallbanner{
+                width: 100%;
+                height: 100px;
+               
+               
+            }
+            #smallbanner .logo{
+                height: 100px;
+                width: 100px;
+                float: left;
+            }
+            #smallbanner .logo img{
+                display:block;
+                height: 100%;
+                width: 100%;
+            }
+            #smallbanner .menu{
+                width: 988px;
+                height: 100%;
+                background:#00266d;
+                float: left;
+            }
+            #smallbanner .menu .introduce{
+                height: 40px;
+                width: 100%;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 16px;
+                line-height: 40px;
+                margin-left: 10px;
+               
+            }
+            #smallbanner .menu .introduce a{
+                text-decoration: none;
+                color: white;
+            }
+            #smallbanner .menu .dmenu{
+                height: 60px;
+                width: 100%;
+                text-transform: uppercase;
+            }
+            #smallbanner .menu .dmenu >ul{
+                height: 100%;
+                width: 650px;
+                float: left;
+           
+            }
+            #smallbanner .menu .dmenu >ul >li{
+                height: 100%;
+               float: left;
+               list-style-type: none;
+               line-height: 60px;
+               padding: 0 16px;
+               font-weight: bold;
+                color:white;
+                box-sizing: content-box;
+                position: relative;
+            }
+            #smallbanner .menu .dmenu >ul >li >a{
+                text-decoration: none;
+               
+                color: white
+            }
+            #smallbanner .search{
+                height: 35px;
+                width: 255px;
+                float: left;
+                border: 5px double white;
+                border-radius: 16px;
+                float: left;
+                margin: 10px 16px;
+            }
+            #smallbanner .search input{
+                font-weight: bold;
+                font-size: 16px;
+                background: none;
+                border: none;
+                color:white;
+                line-height: 28px;
+                margin-left: 10px;
+                width: 85%;
+                float: left;
+            }
+            .search  :focus {
+                outline:none;
+            }
+            #smallbanner .search span{   display: block;
+                                    float: left;
+                                    font-size: 18px;
+                                    color: white;
+                                    margin-top: 5px;
+             }
+             #smallbanner .menu .dmenu >ul>li:hover{
+                background: white;
+                color:black;
+                border-radius:5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                
+
+            }
+             #smallbanner .menu .dmenu >ul>li:hover >a{ color: black}
+           
+             #smallbanner .menu .dmenu >ul>li:active >a{
+                text-decoration:underline;
+             }
+           
+            #smallbanner .menu .dmenu >ul>li .phimchieurap{
+               
+                width: 650px;
+                height: 400px;
+                position: absolute;
+                z-index: 1;
+                left:-78%;
+                display: none;
+               background:white;
+               padding:10px; 
+
+            }
+            #smallbanner .menu .dmenu >ul>li:hover >div{
+                display: block;
+            }
+
+            #smallbanner .menu .dmenu >ul >li .phimchieurap>ul{
+                height: 100%;
+                width: 300px;;
+                float: left;
+                list-style-type: none;
+            }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>ul>li{
+                text-transform: none;
+                font-weight:bold;
+                text-align: left;
+                background: white;
+                height: 40px;
+                line-height: 40px; 
+               
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>ul>li>a{
+                    color: black;
+                    text-transform: capitalize;
+
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>ul>li>a:hover{
+                    color:#334d8f ;
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div{
+                    width: 330px;
+                    height: 100%;
+                    float: left;
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>p{
+                    width: 100%;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: black;
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>a{
+                    float: left;
+                    height: 300px;
+                    width: 145px;
+                    line-height: 20px;
+                    text-align: center;
+                    text-transform:capitalize;
+                    margin-right: 10px;
+                    color:black;
+                    
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>a>img{
+                    width: 145px;
+                    height: 195px;
+                  
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>a:hover{
+                    color:#334d8f
+                }
+                #hotnews{
+                height: 35px;
+                width: 100%;
+                margin:10px 0;
+                background: #ba001f;
+                }
+                #hotnews .hn{
+                color:white;
+                background: var(--maincolor);
+                 height: 100%;
+                 width: 80px;
+                 font-weight: bold;
+                 font-size: 14px;
+                 line-height: 35px;
+                 text-align: right;
+                 float: left;
+                 font-weight: bold;
+                 text-transform: uppercase;
+                }
+                #hotnews .narrow{
+                 width:0px;
+                 height: 0px;
+                 border-top: 17.5px solid transparent;
+                 border-bottom: 17.5px solid transparent;
+                 border-left: 18px solid var(--maincolor);
+                 float: left;
+                 }
+                #hotnews .runningtext{
+                height:100% ;
+                width: 989px;
+                float: left;
+                overflow: hidden;
+             }
+             #hotnews .runningtext >ul{
+                height: 100%;
+                width: 100%;
+                list-style-type: none;
+                white-space: nowrap;
+                animation: runnning 30s;
+                position:relative;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+               }             
+             #hotnews .runningtext ul li{
+                height: 100%;
+                font-weight: bold;
+                display: inline-block;
+                line-height: 35px;
+                padding:0 20px;
+             }
+             #hotnews .runningtext ul li >a{
+                 color:white;
+                 text-decoration: none;
+             }
+             @keyframes runnning {
+                0%{
+                left: 100% 
+                }
+                100%{
+                left: -1000px;
+                 }
+            }
+             #hotnews .runningtext ul:hover{
+                 animation-play-state: paused;
+             }
+             #banner{
+                    height: 290px;
+                }
+            #banner .banner1{
+                height: 100%;
+                width: 767px;
+                float: left;
+                position: relative;
+                }
+            #banner .banner1 img{
+                width: 100%;
+                height: 100%;
+                }
+             #banner .banner1 >a{
+                display: block;
+                height: 88px;
+                width: 627px;
+                background: violet;
+                text-transform:capitalize;
+                font-size: 20px;
+                text-align: justify;
+                color:white;
+                padding: 10px 10px;
+                text-decoration: none;
+              background: rgba(5, 55, 105, 0.5);
+                position: absolute;
+                bottom:10%;
+                left: 10%;
+              
+                }
+               
+            #banner .banner2{
+                    height: 100%;
+                    width: 321px;
+                    float: left;
+                }
+             #banner .banner2 img{
+                    height: 100%;
+                    width: 100%;
+                }
+            #content{
+                    width: 100%;
+                    height: 1300px;
+                    margin-top: 20px;
+                }
+            #content .maincontent{
+                width: 730px;
+                height: 1000px;
+                float: left;
+                margin-right: 37px;
+                background:white;
+                }
+            #content .maincontent >ul{
+                    width: 100%;
+                    height:100%;
+                    list-style-type: none;
+                }
+            #content .maincontent >ul >li{
+                    width: 230px;
+                    height: 400px;
+                    float: left;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+
+                }
+            #content .maincontent >ul >li a{
+                display:block;
+                width: 100%;
+                height: 100%;
+                 text-align: center;
+                 text-decoration: none;
+                 text-transform: capitalize;
+                color:black;
+                 white-space: wrap;
+                   line-height: 40px;
+                  
+                  
+                }
+            #content .maincontent >ul >li >a img{
+                  display: block;
+                  float: left;
+                  height: 360px;
+                  width: 100%;
+                }
+            #content .maincontent >ul >li:hover >a {
+                    color: #334d8f;
+                }
+            #content .maincontent >ul >li >a:hover img{
+                    animation: blur 5s;
+                }
+            @keyframes blur {
+                0%{opacity: 50%;}
+                100%{opacity: 100%;}
+                 }
+           #content .rightct{
+            width: 321px;
+            height: 100%;
+            background: white;
+            float: left;
+           }
+           #content .rightct .top{
+               height: 375px;
+               width: 100%;
+               margin-top: 10px;
+           }
+           #content .rightct .top .title{
+               height: 25px;
+               width:100% ;
+               font-size: 18;
+               text-transform: uppercase;
+               font-weight: bold;
+               color: black;
+               line-height: 25px;
+               margin-bottom: 10px;
+           }
+           #content .rightct .top .title >div{
+               float: left;
+               background: var(--maincolor);
+               height: 100%;
+               width: 4px;
+               margin-right: 10px;
+           }
+           #content .rightct .top  >ul{
+            height:350px ;
+            width: 100%;
+            list-style-type:none;
+           }
+           #content .rightct .top >ul >li{
+            height: 45px;
+            float: left;
+            color:black;
+            font-weight: bold;
+            line-height: 45px;
+            text-transform: capitalize;
+            position: relative;
+            padding: 0 20px;
+            
+           
+           }
+           #content .rightct .top >ul >li >ul{
+            list-style-type: none;
+            height:400px ;
+            width:321px ;
+           
+            position:absolute;
+            left: 0%;
+           
+           }
+           #content .rightct .top >ul >li:hover{
+               background: var(--maincolor);
+               color: white;
+               border-radius: 20px;
+           }
+           
+           #content .rightct .top >ul >li >ul >li{
+               height:40px ;
+               width: 100%;
+               background: white;
+               margin: 10px 0;
+               line-height: 20px;
+              
+           }
+
+           #content .rightct .top >ul >li >ul >li >a{
+               color:black;
+               text-decoration: none;
+               font-weight: normal;
+               display: block;
+               font-size: 13px;
+               height: 100%;
+               width: 100%;
+               
+
+           }
+           #content .rightct .top >ul >li >ul >li >a img{
+               float: left;
+               height: 40px;
+               width: 50px;
+               margin-right: 10px;
+           }
+           #content .rightct .top >ul >li >ul >li >a:hover {
+              color: #334d8f;
+              text-decoration:underline #334d8f;
+           }
+           #footer {
+            height: 200px;
+            width: 100%;
+            background: var(--maincolor);
+            color:white;
+            margin-top: 10px;
+           }
+           #footer .info{
+               height: 190px;
+               width: 470px;
+               padding: 20px 20px;
+               float: left;
+               text-transform: uppercase;
+           }
+           #footer .info a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+           }
+           #footer .info a:hover{
+               text-decoration: underline;
+           }
+           #footer .social{
+               height:190px ;
+               width:550px;
+               float:left;
+               padding: 20px 20px;
+
+           }
+           #footer .social a{
+            display: inline-block;
+            height: 87px;
+            width: 87px;
+            text-decoration: none;
+            margin-left: 10px;
+            
+           }
+           #footer .social a img{
+               height: 100%;
+               width: 100%;
+           }
+    </style>
+</head>
+<body>
+
+    <div id="smallbanner">
+        <div class="logo">
+            <a href=""><img src="Amovie (100 x 100 px).png" alt=""></a>
+        </div>
+        <div class="menu">
+            <div class="introduce">
+                <a href="AboutAnimationCinema.html">Amovie Cinema là gì?</a>
+            </div>
+            <div class="dmenu">
+                <ul>
+                    <li>
+                        <a href="Animationmovie.html">Trang chủ</a>
+                        
+                    </li>
+                    <li>
+                            Phim chiếu rạp
+                            <div class="phimchieurap">
+                            <ul>
+                            <li>
+                                <a href="">Walt Disney</a>
+                            </li>
+                            <li>
+                                <a href="">Pixar</a>
+                            </li>
+                            <li>
+                                <a href="">Ghibli Studio</a>
+                            </li>
+                            <li>
+                                <a href="">Anime</a>
+                            </li>
+                            <li>
+                                <a href="">Animation trung quốc</a>
+                            </li>
+                            <li>
+                                <a href="">Phim sắp chiếu</a>
+                            </li>
+                            </ul>
+                            <div>
+                               <p>Đánh giá cao</p>
+                                <a href=""><img src="inside put.jpg" alt="" >  Inside Out – Những mảnh ghép cảm xúc (2015)</a>
+                                <a href=""> <img src="coco.jpg" alt=""> coco - cuộc hội ngộ diệu kì (2017)         </a>
+                            </div>
+                            </div>
+                    </li>
+                    <li>
+                        <a href="">
+                            Phim lẻ khác
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Tin tức-hậu trường
+                        </a>
+                    </li>
+    
+    
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm..."> 
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="hotnews">
+        <div class="hn">
+            hot news
+          </div>
+          <div class="narrow">
+        </div>
+        <div class="runningtext">
+            <ul>
+                <li>
+                    <a href="">Trả lại kênh Cartoon Network cho con cái chúng tôi!
+                    </a>
+                </li>
+                <li>
+                    <a href="">“Gia tài” đáng nể của xưởng phim hoạt hình Nhật Bản vừa bị tưới xăng đốt</a>
+                </li>
+                <LI>
+                    <a href="">Hoạt hình Pháp thắng Liên hoan phim Annecy
+                    </a>
+                </LI>
+                <li>
+                    <a href="">Netflix làm hoạt hình về truyền thuyết Hằng Nga</a>
+                </li>
+                <li>
+                    <a href="">Hang gấu Pooh giữa đời thực
+                    </a>
+                </li>
+                <li> <a href="">Đà Lạt 'biến hoá' thành cảnh phim hoạt hình</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="banner">
+        <div class="banner1">
+        <img src="thewwindrise.jpf.png" alt="">
+        <a href="">The wind rises - Gió nổi lên rồi, nhất định phải sống thật tốt!</a>
+        </div>
+        <div class="banner2">
+           <a href="top5studios.html"><img src="5studios.jpeg" alt=""></a> 
+        </div>
+
+
+
+    </div>
+    <div id="content">
+        <div class="maincontent">
+        <ul>
+            <li>
+                <a href=""><img src="14-11-07_-_big_hero_6_biet_doi_big_hero_6_v5-01_1_.jpg" alt=""> big hero 6</a>
+            </li>
+            <li>
+               <a href=""><img src="silence.jpg" alt="">a silent voice</a>
+            </li>
+            <li>
+                <a href=""><img src="doremon.jpg" alt="">Doraemon: Nobita và mặt trăng phiêu lưu ký </a>
+             </li>
+             <li>
+                <a href=""><img src="ke-cap-mat-trang-768x432.jpg" alt="">Minions (Kẻ cắp mặt trăng) 2015</a>
+             </li>
+             <li>
+                <a href=""><img src="brave.jpg" alt="">Công chúa tóc xù Brave </a>
+             </li>
+             <li>
+                <a href=""><img src="zootopia.jpg" alt="">Phi vụ động trời Zootopia </a>
+             </li>
+             <li>
+                <a href=""><img src="Kung-Fu-Panda-3-Poster-movie-trailers-40025152-352-440.jpg" alt="">Kung Fu Panda 3 </a>
+             </li>
+             <li>
+                <a href=""><img src="nu-hoang-bang-gia-1.jpg" alt="">Nữ hoàng băng giá Frozen 2013</a>
+             </li>
+             <li>
+                <a href=""><img src="coco.jpg" alt="">coco - cuộc hội ngộ diệu kì</a>
+             </li>
+        </ul>
+        </div>
+        <div class="rightct">
+            <div class="top">
+                <div class="title"> 
+                <div>
+
+                </div>
+                Xem nhiều trong tuần 
+                </div>
+                <ul>
+                    <li>Phim
+                        <ul>
+                            <li> <a href=""><img src="Raya and the Last Dragon.jpg" alt="">Raya and the Last Dragon
+                            </a>
+                            </li>
+                            <li> <a href=""><img src="Tom and Jerry.jpg" alt="">Tom and Jerry
+                            </a>
+                            </li>
+                            <li> <a href=""><img src="Minions The Rise of Gru.jpg" alt="">Minions: The Rise of Gru
+                            </a>
+                            </li>
+                            <li><a href=""><img src="silent 2.jpg" alt="">A Silent Voice </a> 
+                            </li>
+                            <li> <a href=""><img src="người nhện.jpg" alt="">SpiderMan - Into the Spiderverse (Người nhện vũ trụ mới) </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>riview/đánh giá</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="info">
+            <a href="Animationmovie.html">Trang chủ</a>
+            <a href="">Chính sách</a>
+            <a href="">Thông tin về Amovie Cinema</a>
+            © 2021 ALL RIGHTS RESERVED BY Amovie cinema
+        </div>
+        <div class="social">
+            <a href=""><img src="insta.png" alt=""></a>
+            <a href=""><img src="fac.png" alt=""></a>
+            <a href=""><img src="you.png" alt=""></a>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
