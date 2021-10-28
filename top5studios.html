@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>ĐIỂM DANH 5 STUDIOS ANIMATION HÀNG ĐẦU TRÊN THẾ GIỚI</title>
+    <style>
+        :root{
+                --maincolor: #00266d;
+          
+            }
+        *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+
+            }
+            html{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                background:#faf3dd;
+            }
+            body{width: 1100px;
+              
+               background:  white;
+                margin:0 auto;
+                padding: 0 6px 0 6px;
+
+            }
+            #smallbanner{
+                width: 100%;
+                height: 100px;
+               
+               
+            }
+            #smallbanner .logo{
+                height: 100px;
+                width: 100px;
+                float: left;
+            }
+            #smallbanner .logo img{
+                display:block;
+                height: 100%;
+                width: 100%;
+            }
+            #smallbanner .menu{
+                width: 988px;
+                height: 100%;
+                background:#00266d;
+                float: left;
+            }
+            #smallbanner .menu .introduce{
+                height: 40px;
+                width: 100%;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 16px;
+                line-height: 40px;
+                margin-left: 10px;
+               
+            }
+            #smallbanner .menu .introduce a{
+                text-decoration: none;
+                color: white;
+            }
+            #smallbanner .menu .dmenu{
+                height: 60px;
+                width: 100%;
+                text-transform: uppercase;
+            }
+            #smallbanner .menu .dmenu >ul{
+                height: 100%;
+                width: 650px;
+                float: left;
+           
+            }
+            #smallbanner .menu .dmenu >ul >li{
+                height: 100%;
+               float: left;
+               list-style-type: none;
+               line-height: 60px;
+               padding: 0 16px;
+               font-weight: bold;
+                color:white;
+                box-sizing: content-box;
+                position: relative;
+            }
+            #smallbanner .menu .dmenu >ul >li >a{
+                text-decoration: none;
+               
+                color: white
+            }
+            #smallbanner .search{
+                height: 35px;
+                width: 255px;
+                float: left;
+                border: 5px double white;
+                border-radius: 16px;
+                float: left;
+                margin: 10px 16px;
+            }
+            #smallbanner .search input{
+                font-weight: bold;
+                font-size: 16px;
+                background: none;
+                border: none;
+                color:white;
+                line-height: 28px;
+                margin-left: 10px;
+                width: 85%;
+                float: left;
+            }
+            .search  :focus {
+                outline:none;
+            }
+            #smallbanner .search span{   display: block;
+                                    float: left;
+                                    font-size: 18px;
+                                    color: white;
+                                    margin-top: 5px;
+             }
+             #smallbanner .menu .dmenu >ul>li:hover{
+                background: white;
+                color:black;
+                border-radius:5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                
+
+            }
+             #smallbanner .menu .dmenu >ul>li:hover >a{ color: black}
+           
+             #smallbanner .menu .dmenu >ul>li:active >a{
+                text-decoration:underline;
+             }
+           
+            #smallbanner .menu .dmenu >ul>li .phimchieurap{
+               
+                width: 650px;
+                height: 400px;
+                position: absolute;
+                z-index: 1;
+                left:-78%;
+                display: none;
+               background:white;
+               padding:10px; 
+
+            }
+            #smallbanner .menu .dmenu >ul>li:hover >div{
+                display: block;
+            }
+
+            #smallbanner .menu .dmenu >ul >li .phimchieurap>ul{
+                height: 100%;
+                width: 300px;;
+                float: left;
+                list-style-type: none;
+            }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>ul>li{
+                text-transform: none;
+                font-weight:bold;
+                text-align: left;
+                background: white;
+                height: 40px;
+                line-height: 40px; 
+               
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>ul>li>a{
+                    color: black;
+                    text-transform: capitalize;
+
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>ul>li>a:hover{
+                    color:#334d8f ;
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div{
+                    width: 330px;
+                    height: 100%;
+                    float: left;
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>p{
+                    width: 100%;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: black;
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>a{
+                    float: left;
+                    height: 300px;
+                    width: 145px;
+                    line-height: 20px;
+                    text-align: center;
+                    text-transform:capitalize;
+                    margin-right: 10px;
+                    color:black;
+                    
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>a>img{
+                    width: 145px;
+                    height: 195px;
+                  
+                }
+                #smallbanner .menu .dmenu >ul >li .phimchieurap>div>a:hover{
+                    color:#334d8f
+                }
+                #content{
+                width: 100%;
+                margin: 20px 0;
+                background:white;
+                }
+                #content .heading{
+                    height:30px ;
+                    width:100%;
+                    margin: 20px 0;
+                }
+                #content .heading >div{
+                    height: 100%;
+                    width: 10px;
+                    background: var(--maincolor);
+                    float: left;
+                    margin-right: 20px;
+                }
+                #content .heading h1{
+                    line-height: 30px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                #content >img{
+                    display: block;
+                    height: 500px;
+                width: 1000px;
+                margin:0 50px;
+                }
+                #content .mc{
+                height: ;
+                width: 100%;
+                margin:30px 30px
+                }
+                #content .mc h2{
+                text-transform: uppercase;
+                font-size: 16px;
+                color: black;
+                font-weight:bold ;
+                text-align: left;
+                font-style: italic;
+                }
+                #content .mc >ul{
+                padding: 0 20px;
+                }
+                #content .mc img{
+                    display: block;
+                    height: 500px;
+                    width: 900px;
+                   margin:0 50px;
+                }
+                #content .mc >p{
+                width: 948px;
+                color: black;
+                }
+                #footer {
+            height: 200px;
+            width: 100%;
+            background: var(--maincolor);
+            color:white;
+            margin-top: 10px;
+           }
+           #footer .info{
+               height: 190px;
+               width: 470px;
+               padding: 20px 20px;
+               float: left;
+               text-transform: uppercase;
+           }
+           #footer .info a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+           }
+           #footer .info a:hover{
+               text-decoration: underline;
+           }
+           #footer .social{
+               height:190px ;
+               width:550px;
+               float:left;
+               padding: 20px 20px;
+
+           }
+           #footer .social a{
+            display: inline-block;
+            height: 87px;
+            width: 87px;
+            text-decoration: none;
+            margin-left: 10px;
+            
+           }
+           #footer .social a img{
+               height: 100%;
+               width: 100%;
+           }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="smallbanner">
+        <div class="logo">
+            <a href=""><img src="Amovie (100 x 100 px).png" alt=""></a>
+        </div>
+        <div class="menu">
+            <div class="introduce">
+                <a href="">Amovie Cinema là gì?</a>
+            </div>
+            <div class="dmenu">
+                <ul>
+                    <li>
+                        <a href="Animationmovie.html">Trang chủ</a>
+                        
+                    </li>
+                    <li>
+                            Phim chiếu rạp
+                            <div class="phimchieurap">
+                            <ul>
+                            <li>
+                                <a href="">Walt Disney</a>
+                            </li>
+                            <li>
+                                <a href="">Pixar</a>
+                            </li>
+                            <li>
+                                <a href="">Ghibli Studio</a>
+                            </li>
+                            <li>
+                                <a href="">Anime</a>
+                            </li>
+                            <li>
+                                <a href="">Animation trung quốc</a>
+                            </li>
+                            <li>
+                                <a href="">Phim sắp chiếu</a>
+                            </li>
+                            </ul>
+                            <div>
+                               <p>Đánh giá cao</p>
+                                <a href=""><img src="inside put.jpg" alt="" >  Inside Out – Những mảnh ghép cảm xúc (2015)</a>
+                                <a href=""> <img src="coco.jpg" alt=""> coco - cuộc hội ngộ diệu kì (2017)         </a>
+                            </div>
+                            </div>
+                    </li>
+                    <li>
+                        <a href="">
+                            Phim lẻ khác
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Tin tức-hậu trường
+                        </a>
+                    </li>
+    
+    
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Tìm kiếm..."> 
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="content">
+        <div class="heading">
+            <div>
+
+            </div>
+            <h1>ĐIỂM DANH 5 STUDIOS ANIMATION HÀNG ĐẦU TRÊN THẾ GIỚI</h1>
+        </div>
+        <p>Dù là một kiệt tác vẽ tay truyền thống hay một bộ phim hiện đại theo lối CGI (kỹ xảo hình ảnh xây dựng hoàn toàn bằng máy vi tính), thì trong suốt gần một thế kỷ trở lại đây, nghệ thuật làm phim hoạt hình vẫn luôn khiến khán giả phải say mê bởi thế giới các nhân vật hoạt hình cùng cốt truyện vô cùng hấp dẫn </p>
+        <img src="5studios.jpeg" alt="">
+
+        <div class="mc">
+        <h2>1.pixar</h2>
+       
+        <p>Trụ sở chính: thành phố Emeryville, bang California, Hoa Kỳ
+        </p>
+        <p>Pixar được đồng sáng lập bởi Steve Jobs - nhà lãnh đạo nhìn xa trông rộng của hãng điện thoại Apple và được Công ty Walt Disney mua lại vào năm 2006 với giá hơn 7 tỷ USD.</p>
+        <p> Bước chân vào ngành công nghiệp điện ảnh với đứa con tinh thần đầu tiên là “Toy Story”, hãng phim này đã tiếp tục cho ra đời nhiều bộ phim vừa thành công nhất về mặt doanh thu lại nhận được nhiều đánh giá tốt từ giới chuyên môn. Một số phim hoạt hình như:</p>
+        <ul>
+            <li>Series Toy Story (Câu chuyện đồ chơi)</li>
+            <li>Wall-E (Rô-bốt biết yêu)</li>
+            <li> Brave (Công chúa tóc xù ) </li>
+            <li>Ratatouille (Chú chuột đầu bếp)</li>
+            <li> Inside out (Những mảnh ghép cảm xúc)</li>
+        </ul> 
+        <img src="Pixar-Custom.jpg" alt="">
+        <h2>2.WALT DISNEY</h2>
+        
+        <p>Trụ sở chính: thành phố Emeryville, bang California, Hoa Kỳ</p>
+        <p>Hãng phim danh tiếng của ông chủ Disney bắt tay vào sản xuất các bộ phim kể từ năm 1937 với tác phẩm đầu tay thành công xuất sắc - “Nàng Bạch Tuyết và bảy chú lùn”. Walt Disney cũng là cha đẻ của một số bộ phim hoạt hình có doanh thu cao nhất mọi thời đại như “Vua sư tử” và “Aladdin”.</p>
+        <p>Mặc dù hãng phim đã chịu sự suy giảm doanh thu kéo dài hàng suốt một thập kỷ gần đây, nhưng họ đã “comeback” mạnh mẽ hơn bao giờ hết với các bom tấn hoạt hình như:</p>
+        <ul>
+            <li>Frozen (Nữ hoàng băng giá)</li>
+            <li> Wreck-It Ralph (Ráp-phờ đập phá)</li>
+            <li>Big Hero 6 (Biệt đội Big Hero 6)</li>
+        </ul>
+        <img src="walt-disney-animation-studios-99972.jpg" alt="">
+        <h2>3.dreamworks</h2>
+        <p>Trụ sở chính: thành phố Glendale, bang California, Hoa Kỳ        </p>
+        <p>Các bộ phim hoạt hình của DreamWorks đã được công chiếu rộng rãi trên toàn thế giới, đem về cho hãng 22 đề cử Emmys, vô số giải thưởng Annie, 3 giải Oscar cùng nhiều đề cử BAFTA và Quả cầu vàng.</p>
+        <p>Họ là nơi sản xuất ra nhiều bộ phim nhượng quyền thương mại nổi tiếng như:</p>
+        <ul>
+            <li>Shrek</li>
+            <li> How to train your Dragon (Bí kíp luyện rồng)</li>
+            <li>Madagascar (Cuộc phiêu lưu đến Madagascar)</li>
+        </ul>
+        <img src="dreamworks-animation-99977.jpg" alt="">
+
+        <h2>4.ghibli</h2>
+        <p>Trụ sở chính: Koganei, Tokyo, Nhật Bản</p>
+        <p>Sở hữu trong tay 8/15 tác phẩm anime có doanh thu cao nhất Nhật Bản, có thể nói Ghibli là hãng phim hoạt hình hàng đầu Nhật Bản (nếu không muốn nói là trên toàn thế giới).</p>
+        <p>Trong số rất nhiều giải thưởng của họ phải kể đến bốn giải thưởng Viện Hàn lâm Nhật Bản cho phim hoạt hình của năm, một giải Animage Anime Grand Prix, vô số đề cử Oscar và một giải Oscar dành cho phim hoạt hình xuất sắc nhất với tác phẩm Sen và Chihiro ở thế giới thần bí.</p>
+        <img src="studio-ghibli-100051.jpg" alt="">
+
+        <h2>5.cartoon network (CN)</h2>
+        <p>Trụ sở chính: thành phố Burbank, bang California, Hoa Kỳ</p>
+        <p>Mặc dù được xếp vào hàng ngũ “đàn em” trong giới làm hoạt hình (thành lập năm 1994), CN đã vươn lên trở thành một trong những hãng phim thành công nhất trong ngành.</p>
+        <p>Những tác phẩm đầu tay của CN mà ta không thể không nhắc đến đó là Phòng thí nghiệm của Dexter, Johnny Tóc Vàng, Những cô gái siêu nhân và Samurai Jack. Chính những ‘hit’ này đã giúp họ có một chỗ đứng vững chắc trong lòng khán giả Mỹ. Các series phim hoạt hình nổi tiếng trong thời gian gần đây do CN sản xuất bao gồm: Giờ phiêu lưu, Chương trình thường nhật, Nhóc Clarence, Bác Grandpa, Chúng tôi đơn giản là Gấu, Vũ trụ của Steven.</p>
+        <img src="cartoon-network-643280.jpg" alt="">
+
+    </div>
+    </div>
+    <div id="footer">
+        <div class="info">
+            <a href="Animationmovie.html">Trang chủ</a>
+            <a href="">Chính sách</a>
+            <a href="">Thông tin về Amovie Cinema</a>
+            © 2021 ALL RIGHTS RESERVED BY Amovie cinema
+        </div>
+        <div class="social">
+            <a href=""><img src="insta.png" alt=""></a>
+            <a href=""><img src="fac.png" alt=""></a>
+            <a href=""><img src="you.png" alt=""></a>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+</html>
